@@ -1,0 +1,79 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Calculatrice</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.3.5/tailwind.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+<form name="calculette" class="mx-auto overflow-hidden mt-10 shadow-lg mb-2 bg-purple-900 shadow-lg border rounded-lg md:w-3/6 sm:w-4/6">
+  <table class="text-center">
+    <div class="p-5 text-white text-center text-3xl bg-purple-900"><span class="text-orange-500">Calcul</span>atrice </div>
+    <tr >
+      <td ><input class="p-10 ml-10" type="text" name="afficher"></td>
+    </tr>
+    <tr class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+      <td><input class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none" type="button" value="sqrt" onclick="fontionSpe('sqrt')"></td>
+      <td><input class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none" type="button" value="pow" onclick="fontionSpe('pow')"></td>
+      <td><input class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none" type="button" value="log" onclick="fontionSpe('log')"></td>
+      <td><input class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none" type="reset" value="C"></td>
+    </tr>
+    <tr class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+      <td><input class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none" type="button" value="7" onclick="ajouter('7')"></td>
+      <td><input class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none" type="button" value="8" onclick="ajouter('8')"></td>
+      <td><input class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none" type="button" value="9" onclick="ajouter('9')"></td>
+      <td><input class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none" type="button" value="+" onclick="ajouter('+')"></td>
+    </tr>
+    <tr class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+      <td><input class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none" type="button" value="4" onclick="ajouter('4')"></td>
+      <td><input class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none" type="button" value="5" onclick="ajouter('5')"></td>
+      <td><input class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none" type="button" value="6" onclick="ajouter('6')"></td>
+      <td><input class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none" type="button" value="-" onclick="ajouter('-')"></td>
+    </tr>
+    <tr class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+      <td><input class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none" type="button" value="1" onclick="ajouter('1')"></td>
+      <td><input class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none" type="button" value="2" onclick="ajouter('2')"></td>
+      <td><input class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none" type="button" value="3" onclick="ajouter('3')"></td>
+      <td><input class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none" type="button" value="*" onclick="ajouter('*')"></td>
+    </tr>
+    <tr class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
+      <td><input class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none" type="button" value="." onclick="ajouter('.')"></td>
+      <td><input class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none" type="button" value="0" onclick="ajouter('0')"></td>
+      <td><input class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none" type="button" value="=" onclick="resultat()"></td>
+      <td><input class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg border-2 border-purple-700 hover:border-2 hover:border-gray-500 focus:outline-none" type="button" value="/" onclick="ajouter('/')"></td>
+    </tr>
+
+  </table>
+</form>
+
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
